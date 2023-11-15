@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'view_tour_details.dart';
+import 'exploration.dart';
 
 void main() {
   runApp(MyApp());

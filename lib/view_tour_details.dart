@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'recent_trips.dart';
+import 'exploration.dart';
 
 class SecondPage extends StatelessWidget {
   @override
@@ -202,7 +203,12 @@ class SecondPage extends StatelessWidget {
                             ),
                             child: GestureDetector(
                               onTap: () {
-                                // Handle onTap for this card
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ExplorationPage(),
+                            ),
+                          );
                               },
                               child: Image.asset('images/exploration.png'),
                             ),
