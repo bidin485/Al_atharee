@@ -166,7 +166,9 @@ class SecondPage extends StatelessWidget {
                     // Navigate to another page on image click
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ThirdPage()),//this takes you to the page that has tour details where all tours are listed 
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ThirdPage()), //this takes you to the page that has tour details where all tours are listed
                     );
                   },
                   child: Center(
@@ -191,10 +193,10 @@ class SecondPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                        child: Container(
+                      
+                        Container(
                           height: 148,
-                          width: 147,
+                          width: MediaQuery.of(context).size.width/2,
                           child: Card(
                             elevation: 15,
                             shape: RoundedRectangleBorder(
@@ -203,25 +205,44 @@ class SecondPage extends StatelessWidget {
                             ),
                             child: GestureDetector(
                               onTap: () {
-                            Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ExplorationPage(),
-                            ),
-                          );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ExplorationPage(),
+                                  ),
+                                );
                               },
-                              child: Image.asset('images/exploration.png'),
+                    child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'images/exploration.png',
+            width: 121,
+          ),
+          SizedBox(height: 8),  // Adjust the spacing between image and text
+          Text(
+            'Exploration',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
                             ),
+                            
                           ),
+                          
                         ),
-                      ),
+                      
+                     
                       SizedBox(
                         width: 2,
                       ),
                       Expanded(
                         child: Container(
                           height: 148,
-                          width: 147,
+                          width: MediaQuery.of(context).size.width/2,
                           child: Card(
                             elevation: 15,
                             shape: RoundedRectangleBorder(
@@ -231,7 +252,23 @@ class SecondPage extends StatelessWidget {
                               onTap: () {
                                 // Handle onTap for this card
                               },
-                              child: Image.asset('images/charity.png'),
+                                    child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'images/charity.png',
+            width: 121,
+          ),
+          SizedBox(height: 8),  // Adjust the spacing between image and text
+          Text(
+            'Charity',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
                             ),
                           ),
                         ),
@@ -246,7 +283,7 @@ class SecondPage extends StatelessWidget {
                       Expanded(
                         child: Container(
                           height: 148,
-                          width: 147,
+                          width: MediaQuery.of(context).size.width/2,
                           child: Card(
                             elevation: 15,
                             shape: RoundedRectangleBorder(
@@ -256,7 +293,23 @@ class SecondPage extends StatelessWidget {
                               onTap: () {
                                 // Handle onTap for this card
                               },
-                              child: Image.asset('images/dawa.png'),
+                                    child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'images/dawa.png',
+            width: 106,
+          ),
+          SizedBox(height: 8),  // Adjust the spacing between image and text
+          Text(
+            'Dawah',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
                             ),
                           ),
                         ),
@@ -267,7 +320,7 @@ class SecondPage extends StatelessWidget {
                       Expanded(
                         child: Container(
                           height: 148,
-                          width: 147,
+                          width: MediaQuery.of(context).size.width/2,
                           child: Card(
                             elevation: 15,
                             shape: RoundedRectangleBorder(
@@ -278,7 +331,23 @@ class SecondPage extends StatelessWidget {
                               onTap: () {
                                 // Handle onTap for this card
                               },
-                              child: Image.asset('images/camping.png'),
+                                    child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'images/camping.png',
+            width: 90,
+          ),
+          SizedBox(height: 8),  // Adjust the spacing between image and text
+          Text(
+            'Camping',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
                             ),
                           ),
                         ),
